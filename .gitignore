@@ -1,0 +1,8 @@
+site/
+.env
+blocks/
+venv/
+yara/yarGen
+bitlocker2/bitlocker-2.dd
+bitlocker1/bitlocker-1.dd
+bitlocker2/memdump.mem

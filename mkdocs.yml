@@ -1,0 +1,152 @@
+# Reference: https://squidfunk.github.io/mkdocs-material/reference/
+site_name: picoCTF 2025 Write-Up
+site_author: Knight
+theme:
+  icon:
+    # Material for MkDocs bundles several icon sets:
+    # - Material Design (https://materialdesignicons.com/)
+    # - FontAwesome (https://fontawesome.com/search?m=free)
+    # - Octicons (https://octicons.github.com/)
+    # - Simple Icons (https://simpleicons.org/)
+    # Below are some suitable logo examples: 
+    # logo: fontawesome/regular/snowflake
+    # logo: fontawesome/solid/sleigh
+    # logo: fontawesome/solid/candy-cane
+    # logo: fontawesome/solid/tree
+    # logo: fontawesome/solid/chess-knight
+    logo: fontawesome/regular/chess-knight
+    annotation: material/plus-circle-outline
+  name: material
+  favicon: img/misc/knight_logo.ico
+  features:
+    - toc.integrate
+    - content.code.copy
+    - navigation.sections
+    #- navigation.instant
+    #- navigation.top
+    #- navigation.tabs
+    #- navigation.tabs.sticky
+    #- navigation.expand
+    #- navigation.top
+    #- navigation.prune
+    #- toc.follow
+  palette:
+    # Material for MkDocs supports a light (default) and dark (slate) theme.
+    # Each mode supports configurable primary and accent colors.
+    # https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/
+    # Primary colors:
+    # red, pink, purple, deep purple, indigo, blue, light blue, cyan, teal,
+    # green, light green, lime, yellow, amber, orange, deep orange, brown,
+    # grey, blue grey, black, and white.
+    # Accent colors:
+    # red, pink, purple, deep purple, indigo, blue, light blue, cyan, teal,
+    # green, light green, lime, yellow, amber, orange, and deep orange.
+    # Palette toggle for light mode
+    - scheme: default
+      primary: pink
+      accent: pink
+      toggle:
+        icon: material/weather-night 
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - scheme: slate
+      primary: pink
+      accent: cyan
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/knight-scott
+      name: GitHub
+extra_css:
+  - css/extra.css
+extra_javascript:
+  - https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js
+  - js/tablesort.js
+markdown_extensions:
+  - abbr
+  - attr_list
+  - admonition
+  - md_in_html
+  - meta
+  - footnotes
+  - def_list
+  - toc:
+      permalink: ⚓︎
+      toc_depth: 2
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.details
+  - pymdownx.blocks.caption
+  - pymdownx.keys
+  - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.tasklist:
+      custom_checkbox: true
+nav:
+# The 'nav' section defines the content of the sidebar navigation.
+- Welcome: 'index.md'
+- General Skills:
+  - Introduction: 'general.md'
+  - Section 100:
+    - FANTASY CTF: 'General Skills/o1.md'
+    - Rust fixme 1: 'General Skills/o2.md'
+    - Rust fixme 2: 'General Skills/o3.md'
+    - Rust fixme 3: 'General Skills/o4.md'
+- Web Exploitation:
+  - Introduction: 'webexploit.md'
+  - Section 100:
+    - Cookie Monster Secret Recipe: 'WebExploitation/o1.md'
+    - head-dump: 'WebExploitation/o2.md'
+    - n0s4n1ty 1: 'WebExploitation/o3.md'
+    - SSTI 1: 'WebExploitation/o4.md'
+  - Section 200:    
+    - SSTI 2: 'WebExploitation/o5.md'
+    - 3v@l: 'WebExploitation/o6.md'
+- Cryptography:
+  - Introduction: 'cryptography.md'
+  - Section 100:
+    - hashcrack: 'Cryptography/o1.md'
+  - Section 200:
+    - EVEN RSA CAN BE BROKEN???: 'Cryptography/o2.md'
+    - Guess My Cheese (Part 1): 'Cryptography/o3.md'
+- Reverse Engineering:
+  - Introduction: 'reverse.md'
+  - Section 100:
+    - Flag Hunters: 'Reverse Engineering/o1.md'
+  - Section 200:
+    - Binary Instrumentation 1: 'Reverse Engineering/o2.md'
+    - Tap into Hash: 'Reverse Engineering/o3.md'
+- Forensics:
+  - Introduction: 'forensics.md'
+  - Section 100:
+    - Ph4nt0m 1ntrud3r: 'Forensics/o1.md'
+    - RED: 'Forensics/o2.md'
+    - flags are stepic: 'Forensics/o3.md'
+  - Section 200:
+    - Bitlocker-1: 'Forensics/o4.md'
+    - Event-Viewing: 'Forensics/o5.md'
+- Binary Exploitation:
+  - Introduction: 'binary.md'
+  - Section 100:
+    - PIE TIME: 'Binary Exploitation/o1.md'
+    - hash-only-1: 'Binary Exploitation/o2.md'
+  - Section 200:
+    - hash-only-2: 'Binary Exploitation/o3.md'
